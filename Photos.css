@@ -1,0 +1,49 @@
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+	". box1 box1 ."
+	". box2 box3 ."
+	". box4 box4 .";
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.box1 {
+	width: 800px;
+	grid-area: box1;
+	border-radius: 10px;
+}
+
+.box2 {
+	width: 400px;
+	grid-area: box2;
+	border-radius: 10px;
+}
+
+.box3 {
+	width: 400px;
+	grid-area: box3;
+	border-radius: 10px;
+}
+
+.box4 {
+	width: 800px;
+	grid-area: box4;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	.box1{
+		width: 400px;
+	}
+	.box4 {
+		width: 400px;
+	}
+}

@@ -1,0 +1,41 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	color: white;
+}
+
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+	". . ."
+	"pic1 box1 ."
+	". . ."; 
+	justify-items: center; 
+	align-items: center;
+}
+
+.box1 {
+	width: 500px;
+	background-color: rgb(147, 219, 200);
+	grid-area: box1;
+	border-radius: 10px;
+	padding: 20px 30px;
+}
+
+.box1:hover {
+	padding: 80px 90px;
+}
+
+.img {
+	grid-area: pic1;
+	height: 300px;
+	
+}
+
+@media screen and (max-width: 1024px) {
+	.box1 {
+		width:200px;
+	}
+}
